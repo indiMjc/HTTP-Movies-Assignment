@@ -48,6 +48,7 @@ export default class Movie extends React.Component {
         <div className="edit-button" onClick={this.routeToItem}>
           Edit
         </div>
+        <div className="delete-button">Delete</div>
       </div>
     );
   }

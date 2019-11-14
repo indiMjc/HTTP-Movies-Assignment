@@ -20,6 +20,12 @@ export default class MovieList extends Component {
   render() {
     return (
       <div className="movie-list">
+        <div
+          className="add-button"
+          onClick={() => this.props.history.push("/add-movie")}
+        >
+          Add new movie
+        </div>
         {this.state.movies.map(movie => (
           <MovieDetails key={movie.id} movie={movie} />
         ))}

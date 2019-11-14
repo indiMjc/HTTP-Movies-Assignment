@@ -54,6 +54,9 @@ body {
   margin: 1rem auto;
 }
 .save-button {
+  position: absolute;
+  top: 25px;
+  right: 25px;
   border: 1px solid grey;
   padding: 5px 10px;
   background-color: lightseagreen;
@@ -84,6 +87,18 @@ body {
 }
 .delete-button:hover {
   background-color: rgb(100, 0, 0);
+  color: white;
+}
+.add-button {
+  /* position: absolute;
+  top: 175px;
+  right: 25px; */
+  border: 1px solid grey;
+  padding: 5px 10px;
+  background-color: lightblue;
+}
+.add-button:hover {
+  background-color: darkblue;
   color: white;
 }
 .home-button {

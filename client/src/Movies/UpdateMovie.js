@@ -38,6 +38,8 @@ const UpdateMovie = props => {
     axios
       .put(`http://localhost:5000/api/movies/${movie.id}`, movie)
       .then(res => {
+        props.setMovies(res.data);
+        props.history.push("/");
         console.log(res);
       })
       .catch(err => console.log(err));

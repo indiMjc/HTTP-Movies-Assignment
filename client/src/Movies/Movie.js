@@ -1,8 +1,6 @@
 import React from "react";
-import { Route } from "react-router-dom";
 import axios from "axios";
 import MovieCard from "./MovieCard";
-import UpdateMovie from "./UpdateMovie";
 export default class Movie extends React.Component {
   constructor(props) {
     super(props);
@@ -50,16 +48,6 @@ export default class Movie extends React.Component {
         <div className="edit-button" onClick={this.routeToItem}>
           Edit
         </div>
-        <Route
-          path="/update-movie/:id"
-          render={props => (
-            <UpdateMovie
-              {...props}
-              //   savedList={savedList}
-              //   setSavedList={setSavedList}
-            />
-          )}
-        />
       </div>
     );
   }

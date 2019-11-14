@@ -49,6 +49,7 @@ const UpdateMovie = props => {
     <div className="update-form">
       <h1>Edit movie:</h1>
       <form onSubmit={handleSubmit}>
+        <p>Title:</p>
         <input
           type="text"
           name="title"
@@ -57,6 +58,7 @@ const UpdateMovie = props => {
         />
         <br />
         <br />
+        <p>Director:</p>
         <input
           type="text"
           name="director"
@@ -65,12 +67,23 @@ const UpdateMovie = props => {
         />
         <br />
         <br />
+        <p>Metascore:</p>
         <input
           type="number"
           name="metascore"
           value={movie.metascore}
           onChange={changeHandler}
         />
+        <br />
+        <br />
+        <p>Stars:</p>
+        {movie.stars.map(i => (
+          <>
+            <input type="text" name={i} value={i} onChange={changeHandler} />
+            <br />
+            <br />
+          </>
+        ))}
         <button className="save-button">Submit changes</button>
       </form>
     </div>

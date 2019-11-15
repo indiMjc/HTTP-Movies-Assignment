@@ -40,7 +40,6 @@ const UpdateMovie = props => {
       .then(res => {
         props.setMovies(res.data);
         props.history.push("/");
-        console.log(res);
       })
       .catch(err => console.log(err));
   };
@@ -77,13 +76,9 @@ const UpdateMovie = props => {
         <br />
         <br />
         <h3>Stars:</h3>
-        {movie.stars.map(i => (
-          <div key={i}>
-            <input type="text" name={i} value={i} onChange={changeHandler} />
-            <br />
-            <br />
-          </div>
-        ))}
+        <input type="text" onChange={changeHandler} value={movie.stars} />
+        <br />
+        <br />
         <button className="save-button">Submit changes</button>
       </form>
     </div>
